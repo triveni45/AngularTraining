@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;
+}
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+width: 45%;
+padding: 12px;
+border: 1px solid rgb(168, 166, 166);
+border-radius: 4px;
+resize: vertical;
+}
+textarea{
+width:45%;
+padding: 12px;
+border: 1px solid rgb(168, 166, 166);
+border-radius: 4px;
+resize: vertical;
+}
+input[type=radio],input[type=checkbox]{
+width: 1%;
+padding-left: 0%;
+border: 1px solid rgb(168, 166, 166);
+border-radius: 4px;
+resize: vertical;
+}
+h4{
+font-family: Arial;
+font-size: medium;
+font-style: normal;
+font-weight: bold;
+text-align: center;
+text-decoration: underline;
+}
+label{
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+input[type=button] {
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float:left;
+}
+input[type=reset] {
+background-color: blue;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float:left;
+margin-left: 7px
+}
+input[type=button]:hover {
+background-color: #32a336;
+}
+.container1{
+border-radius: 5px;
+background-color:#f2f2f2;
+padding: 20px;
+}
+.col-10{
+float: left;
+width:10%;
+margin-top: 6px;
+}
+.col-90{
+float: left;
+width: 90%;
+margin-top: 6px;
+}
+.row:after{
+content: "";
+display: table;
+clear: both;
+}
+.text-danger{
+    color: red;
+}
+@media screen and (max-width: 600px) {
+.col-10,.col-90,input[type=submit]{
+    width: 100%;
+    margin-top: 0;
+}
+}
+    </style>
+</head>
+<body>
+    <h4>Registration Form</h4>
+    <div class="container1">
+        <form>
+            
+            
+            <div class="row">
+                <div class="col-10">
+                    <label for="name">Name:</label>
+                </div>
+                
+                <div class="col-90">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" pattern="[a-zA-Z]" title="Name should contain albhabets only"><br>
+                    <span class="text-danger" id="nameValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                <label for="email">Email:</label>
+                </div>  
+                <div class="col-90">
+                <input type="text" class="form-control" id="email" placeholder="Enter email"><br>
+                <span class="text-danger" id="emailValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                <input type="password" class="form-control" id="pass" placeholder="Enter password"><br>
+                <span class="text-danger" id="passValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                <label for="cpassword">Confirm Password:</label>
+                </div>
+                <div class="col-90">
+                <input type="password" class="form-control" id="cpass" placeholder="Enter confirm password"><br>
+                <span class="text-danger" id="cpassValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                     <label for="email">Gender:</label><br />
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" value="male"/>Male
+                    <input type="radio" id="female" value="female"/>Female
+                    <br>
+                    <span class="text-danger" id="genderValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                <label for="hobbies">Hobbies:</label>
+                </div>
+                <div class="col-90">
+                <input type="checkbox" id="cricket">Cricket<br/>
+                <input type="checkbox" id="badminton">Badminton<br/>
+                <input type="checkbox" id="football">Football<br/>
+                <span class="text-danger" id="hobbyValidation"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                <label for="remarks">Remarks:</label>
+                </div>
+                <div class="col-90">
+                <textarea class="form-control" id="remarks"></textarea><br>
+                <span class="text-danger" id="remarksValidation"></span><br>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">City:</label>
+                </div>
+                <div class="col-90">
+                <select id="city" class="form-control">
+                    <option value="">Select a city</option>
+                    <option value="panvel">Panvel</option>
+                    <option value="thane">Thane</option>
+                    <option value="rabale">Rabale</option>
+                    <option value="ghansoli">Ghansoli</option>
+                </select>
+                <br>
+                <span class="text-danger" id="cityValidation"></span><br>
+            </div>
+            </div>
+      
+            <div class="row">
+                <input type="button" id="submit" value="Submit" onclick="Submit()">
+                <input type="reset">
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        function Submit(){
+            var name = document.getElementById('name').value;
+            var regName = /\d+$/g; 
+            var isvalid=true;
+            if(name == "" || name == null)  
+            {
+                document.getElementById('nameValidation').innerHTML = "Name field is required";
+                isvalid=false;
+            }
+            else if(regName.test(name))
+            {
+                document.getElementById('nameValidation').innerHTML = "Name field should contain alphabets only";
+                isvalid=false;
+            }
+            else
+            {
+                document.getElementById('nameValidation').innerHTML = "";
+                
+            }
+
+            var email = document.getElementById('email').value;
+            var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+            if(email == ""  || email == null)
+            {
+                document.getElementById('emailValidation').innerHTML = "Email field is required";
+                isvalid=false;
+            }
+            else if(!regEmail.test(email))
+            {
+                document.getElementById('emailValidation').innerHTML = "Please enter a valid Email";
+                isvalid=false;
+            }
+            else
+            {
+                document.getElementById('emailValidation').innerHTML = "";
+            }
+
+            var password = document.getElementById('pass').value;
+            if(password == "" || password == null){
+                document.getElementById('passValidation').innerHTML = "Password field is required";
+                isvalid=false;
+            }
+            else if(password.length < 8 || password.length > 20)
+            {
+                document.getElementById('passValidation').innerHTML = "Please enter a valid password";
+                isvalid=false;
+            }
+            else{
+                document.getElementById('passValidation').innerHTML = "";
+            }
+
+            var confirmPass = document.getElementById('cpass').value;
+            if(confirmPass == "" || confirmPass == null){
+                document.getElementById('cpassValidation').innerHTML = "Confirm Password is reuired";
+                isvalid=false;
+            }
+            else if(password != confirmPass){
+                document.getElementById('cpassValidation').innerHTML = "Password & Confirm Password does not match";
+                isvalid=false;
+            }
+
+            else{
+                document.getElementById('cpassValidation').innerHTML = "";
+            }
+
+
+            if(document.getElementById('male').checked == false && document.getElementById('male').checked == false)
+            {
+                document.getElementById('genderValidation').innerHTML = "This field is required";
+                isvalid=false;
+            }    
+            else{
+                document.getElementById('genderValidation').innerHTML = "";
+            }
+            
+            if(document.getElementById('cricket').checked == false && document.getElementById('badminton').checked == false && document.getElementById('football').checked == false)
+            {
+                document.getElementById('hobbyValidation').innerHTML = "This field is required";
+                isvalid=false;
+            }    
+            else{
+                document.getElementById('hobbyValidation').innerHTML = "";
+
+            }
+
+            var remarks = document.getElementById('remarks').value;
+            if(remarks == "" || remarks == null)
+            {
+                document.getElementById('remarksValidation').innerHTML = "This field is required";
+                isvalid=false;
+            }
+            else if(remarks.length > 20)
+            {
+                document.getElementById('remarksValidation').innerHTML = "Maximun length of remarks field should be 20";
+                isvalid=false;
+            }
+            else
+            {
+                document.getElementById('remarksValidation').innerHTML = "";
+            }
+
+            var city = document.getElementById('city').value;
+            if(city == ""){
+                document.getElementById('cityValidation').innerHTML = "This field is required";
+                isvalid=false;
+            }
+            else{
+                document.getElementById('cityValidation').innerHTML = "";
+            }
+            if (isvalid === true){
+                alert("Form Submitted Successfully");
+                location.reload();
+             }
+
+        }
+        
+        
+
+    </script>
+</body>
+</html>
